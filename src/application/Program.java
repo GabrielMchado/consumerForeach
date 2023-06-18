@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.function.Consumer;
+//import java.util.function.Consumer;
 
 import entities.Product;
 //import util.PriceUpdate;
@@ -25,9 +25,7 @@ public class Program {
 		
 		double facctor = 1.1;
 		
-		Consumer<Product> cons = p -> p.setPrice(p.getPrice() * facctor);
-		
-		list.forEach(cons);	
+		list.forEach(p -> p.setPrice(p.getPrice() * facctor));	
 		list.forEach(System.out::println);
 		
 		sc.close();
